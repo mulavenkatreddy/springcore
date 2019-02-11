@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+		
+		<!-- autowiring using byname mode-->
+		<!-- by name mode interally uses setter injection-->
+		
+	 <bean id = "spellChecker" class = "com.spring.springcore.autowiring.SpellChecker">
+		</bean>
+		
+		<bean id = "texteditor" class = "com.spring.springcore.autowiring.TextEditor " autowire="byName">
+		</bean>
+	
+	
+	<!-- autowiring  using bytype mode -->
+	<!-- bytype mode interally uses setter injection-->
+	
+<!-- <bean id = "spell" class = "com.spring.springcore.autowiring.SpellChecker">
+		</bean>
+		
+		<bean id = "texteditor" class = "com.spring.springcore.autowiring.TextEditor " autowire="byType">
+	</bean>
+	-->
+	
+	<!-- autowiring by using  constructor mode-->
+	<!-- constructor  mode interally uses constructor injection-->
+	<!-- <bean id = "texteditor" class = "com.spring.springcore.autowiring.TextEditor " autowire="constructor">
+		</bean>
+
+ 		<bean id = "spellChecker" class = "com.spring.springcore.autowiring.SpellChecker">
+		</bean>
+		-->
+</beans>

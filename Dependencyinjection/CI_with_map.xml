@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+		
+		<bean id = "ans1" class = "com.spring.springcoreprograms.MapDep2">
+		<constructor-arg value = "1" type = "int"></constructor-arg>
+		<constructor-arg value = "java is a high level programming language"></constructor-arg>
+		<constructor-arg value = "2/02/2019"></constructor-arg>
+		</bean>
+		
+		<bean id = "ans2" class = "com.spring.springcoreprograms.MapDep2">
+		<constructor-arg value = "2" type = "int"></constructor-arg>
+		<constructor-arg value = "java is a simple"></constructor-arg>
+		<constructor-arg value = "2/02/2019"></constructor-arg>
+		</bean>
+		
+		<bean id = "user1" class = "com.spring.springcoreprograms.MapDep1">
+		<constructor-arg value = "1" type = "int"></constructor-arg>
+		<constructor-arg value = "by venkatrddy"></constructor-arg>
+		<constructor-arg value = "venky70662@gmail.com"></constructor-arg>
+		</bean>
+		
+		<bean id = "user2" class = "com.spring.springcoreprograms.MapDep1">
+		<constructor-arg value = "2" type = "int"></constructor-arg>
+		<constructor-arg value = "by ramesh"></constructor-arg>
+		<constructor-arg value = "ramesh@gmail.com"></constructor-arg>
+		</bean>
+		
+		<bean id = "question" class = "com.spring.springcoreprograms.MapWithDepObject">
+		<constructor-arg value = "1" type = "int"></constructor-arg>
+		<constructor-arg value = "what is java ?"></constructor-arg>
+		<constructor-arg>
+		<map>
+		<entry key-ref = "ans1" value-ref = "user1"></entry>
+		<entry key-ref = "ans2" value-ref = "user2"></entry>
+		</map>
+		</constructor-arg>
+		</bean>
+		
+</beans>

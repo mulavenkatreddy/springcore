@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+		
+<bean id = "ans1" class = "com.spring.springcoreprograms.SI_MapDep1">
+<property name="id" value = "241"></property>
+<property name="answer" value = "spring is a framework"></property>
+<property name="date" value = "20/02/2018"></property>
+</bean>
+		
+<bean id = "ans2" class = "com.spring.springcoreprograms.SI_MapDep1">
+<property name="id" value = "451"></property>
+<property name="answer" value = "spring is a simple"></property>
+<property name="date" value = "10/12/2016"></property>
+</bean>
+
+<bean id = "user1" class = "com.spring.springcoreprograms.SI_MapDep">
+<property name="id" value = "40"></property>
+<property name="name" value = " venkat reddy"></property>
+<property name="mailID" value = "venky7@gmail.com"></property>
+</bean>
+
+<bean id = "user2" class = "com.spring.springcoreprograms.SI_MapDep">
+<property name="id" value = "44"></property>
+<property name="name" value = "vijay"></property>
+<property name="mailID" value = "vijay@gmail.com"></property>
+</bean>
+
+<bean id = "ques" class = "com.spring.springcoreprograms.SI_MapWithDepObject">
+<property name="qno" value = "1"></property>
+<property name="question" value = "what is spring?"></property>
+<property name="answers">
+<map>
+<entry key-ref = "ans1" value-ref="user1"></entry>
+<entry key-ref = "ans2" value-ref="user2"></entry>
+</map>
+</property>
+</bean>
+</beans>

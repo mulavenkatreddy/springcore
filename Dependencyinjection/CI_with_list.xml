@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+		
+		<bean id = "ans1" class = "com.spring.springcoreprograms.ListDep">
+		<constructor-arg value ="1" type = "int"></constructor-arg>
+		<constructor-arg value = "java is a platform independent language"></constructor-arg>
+		<constructor-arg value = " by venkat"></constructor-arg>
+		</bean>
+		
+		<bean id = "ans2" class = "com.spring.springcoreprograms.ListDep">
+		<constructor-arg value ="2" type = "int"></constructor-arg>
+		<constructor-arg value = "java is a secure"></constructor-arg>
+		<constructor-arg value = " by ramesh"></constructor-arg>
+		</bean>
+		
+		<bean id = "ans3" class = "com.spring.springcoreprograms.ListDep">
+		<constructor-arg value ="3" type = "int"></constructor-arg>
+		<constructor-arg value = "java is a supports object oriented programming"></constructor-arg>
+		<constructor-arg value = " by anjan"></constructor-arg>
+		</bean>
+		
+		<bean id = "question" class = "com.spring.springcoreprograms.ListWithDepObject">
+		<constructor-arg value ="1" type = "int"></constructor-arg>
+		<constructor-arg value = "what is java ?"></constructor-arg>
+		<constructor-arg>
+		<list>
+		<ref bean = "ans1"/>
+		<ref bean = "ans2"/>
+		<ref bean = "ans3"/>
+		</list>
+		</constructor-arg>
+		</bean>
+</beans>

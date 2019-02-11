@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+		
+<!-- telling jvm that annotation is specifed in main program -->
+ <context:annotation-config/>
+ 
+<!-- autowiring using bytype mode with @autowiring annotation in main class-->
+<!-- annotation on setter method -->
+
+<bean id = "spell" class = "com.spring.springcore.autowiring.SpellChecker">
+</bean>
+		
+<bean id = "texteditor" class = "com.spring.springcore.autowiring.TextEditor">
+</bean> 
+
+
+
+<!-- autowiring using byname mode with @autowiring annotation in main class-->
+<!-- annotation on setter method -->
+<!-- 		
+<bean id = "spellChecker" class = "com.spring.springcore.autowiring.SpellChecker">
+</bean>
+		
+<bean id = "texteditor" class = "com.spring.springcore.autowiring.TextEditor">
+</bean>
+-->
+</beans>
